@@ -147,8 +147,10 @@ const Table = ({ booked, booking, cancelBooking }) => {
         </div>
       </div>
 
-      {/* <!-- Preview Data --> */}
-      <div className="table-container">
+     
+
+      {
+        booked.length > 0 && <div className="table-container">
         <table className="booking-table">
           <thead className="bg-gray-100/50">
             <tr className="text-black text-left">
@@ -173,6 +175,8 @@ const Table = ({ booked, booking, cancelBooking }) => {
           </tbody>
         </table>
       </div>
+      }
+      
     </section>
   );
 };
